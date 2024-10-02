@@ -20,12 +20,14 @@ struct BottomAlertModifier<Label: View>: ViewModifier {
                         .insertionStyle(.push(from: .bottom))
                         .removalStyle(.opacity)
                         .onAppear {
+                            let impactMed = UIImpactFeedbackGenerator(style: .medium)
+                            impactMed.impactOccurred()
                             DispatchQueue.main.asyncAfter(deadline: .now() + autoDismissInterval) {
                                 withAnimation {
                                     isPresented = false
+                                    impactMed.impactOccurred()
                                 }
                             }
-                            
                         }
                 }
             }
