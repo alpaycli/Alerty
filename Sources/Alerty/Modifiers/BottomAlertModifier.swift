@@ -31,6 +31,7 @@ struct BottomAlertModifier<Label: View>: ViewModifier {
                         }
                 }
             }
+//            .hapticFeedback(trigger: isPresented)
     }
 }
 

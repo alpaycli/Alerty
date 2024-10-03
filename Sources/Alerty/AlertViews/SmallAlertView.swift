@@ -62,6 +62,7 @@ public struct SmallAlertView: View {
 }
 
 public extension SmallAlertView {
+    
     init(
         title: String,
         systemImage: String,
