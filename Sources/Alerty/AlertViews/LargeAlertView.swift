@@ -62,7 +62,7 @@ public struct LargeAlertView: View {
             Spacer()
             
             if let buttonTitle {
-                Button(buttonTitle) {}
+                Button(buttonTitle, action: buttonAction ?? {})
                     .foregroundStyle(.gray)
                     .fontWeight(.bold)
             }
@@ -116,4 +116,8 @@ public extension LargeAlertView {
         
         self.image = nil
     }
+}
+
+#Preview {
+    LargeAlertView(title: "Error sending verification code, please try again later.", buttonAction: {})
 }

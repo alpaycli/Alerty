@@ -99,3 +99,7 @@ public extension SmallAlertView {
         self.image = nil
     }
 }
+
+#Preview {
+    SmallAlertView(title: "Error sending verification code, please try again later.", onTapAction: {})
+}
